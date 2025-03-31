@@ -6,8 +6,6 @@
     <title>Il Mio Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -42,8 +40,7 @@
             </div>
         </div>
     </nav>
-
-        <!-- Modifica alla sezione Hero -->
+     <!-- Modifica alla sezione Hero -->
     <section id="hero" class="hero-section">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
@@ -252,7 +249,7 @@
                         </div>
                         <h3>Sicurezza sul Lavoro</h3>
                         <p>Certificazione che attesta la conoscenza delle normative e procedure di sicurezza nell'ambiente lavorativo informatico.</p>
-                        <a href="/sicurezzaL.html" class="btn-link">Dettagli <i class="fas fa-arrow-right"></i></a>
+                        <a href="./sicurezzaL.html" class="btn-link">Dettagli <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -262,7 +259,7 @@
                         </div>
                         <h3>Cisco IT Essentials</h3>
                         <p>Certificazione Cisco che attesta competenze nell'hardware dei PC, nei sistemi operativi, nelle reti e nella sicurezza.</p>
-                        <a href="/CiscoIT.html" class="btn-link">Dettagli <i class="fas fa-arrow-right"></i></a>
+                        <a href="./CiscoIT.html" class="btn-link">Dettagli <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 mb-4">
@@ -272,7 +269,7 @@
                         </div>
                         <h3>ECDL - Computer Essentials</h3>
                         <p>Modulo della Patente Europea del Computer che certifica le competenze di base nell'uso del computer.</p>
-                        <a href="/moduloEcdl.html" class="btn-link">Dettagli <i class="fas fa-arrow-right"></i></a>
+                        <a href="./moduloEcdl.html" class="btn-link">Dettagli <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -429,51 +426,53 @@
     <script>
         new WOW().init();
     </script>
-    <!-- Carica EmailJS in fondo al file -->
-    <script src="https://cdn.emailjs.com/sdk/3.11.0/email.min.js" onload="initializeEmailJS()"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
-        function initializeEmailJS() {
-            console.log("Tentativo di inizializzazione EmailJS");
-            if (typeof emailjs !== 'undefined') {
-                console.log("EmailJS trovato, inizializzazione in corso");
-                emailjs.init("30L1N5LUInR8e34jn"); // Sostituisci con il tuo User ID EmailJS
-                console.log("EmailJS inizializzato con successo");
-            } else {
-                console.error("EmailJS non è stato caricato correttamente.");
-            }
-        }
-
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("📩 Tentativo di caricamento EmailJS...");
+    
+            setTimeout(() => {
+                if (typeof emailjs !== 'undefined') {
+                    console.log("✅ EmailJS caricato con successo!");
+                    emailjs.init("30L1N5LUInR8e34jn"); // Inizializza con il tuo User ID
+                } else {
+                    console.error("❌ Errore: EmailJS non è stato caricato!");
+                }
+            }, 2000); // Aspetta 2 secondi per assicurarti che lo script sia stato caricato
+        });
+    
         function sendEmail(form, event) {
             event.preventDefault();
-
-            // Verifica se emailjs è definito
+    
             if (typeof emailjs === 'undefined') {
-                console.error("EmailJS non è stato caricato correttamente.");
-                alert("Errore: il servizio di invio email non è disponibile. Riprova più tardi.");
+                console.error("❌ EmailJS non è stato caricato correttamente.");
+                alert("Errore: il servizio EmailJS non è disponibile.");
                 return false;
             }
-
+    
             var templateParams = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             };
-
+    
+            console.log("📨 Tentativo di invio email con dati:", templateParams);
+    
             emailjs.send('service_8ltuhoo', 'template_vlcxesf', templateParams)
                 .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Messaggio inviato con successo!');
+                    console.log("✅ Email inviata con successo!", response);
+                    alert("Messaggio inviato con successo!");
                     form.reset();
                 }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Errore nell\'invio del messaggio. Riprova più tardi.');
+                    console.error("❌ Errore nell'invio dell'email", error);
+                    alert("Errore nell'invio del messaggio. Riprova più tardi.");
                 });
-
+    
             return false;
         }
     </script>
+    
 
 </body>
 </html>
