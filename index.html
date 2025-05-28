@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio<span class="text-accent">Tech</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Chi Sono</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Competenze</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Certificazioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Esperienza</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contatti</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     <!-- Modifica alla sezione Hero -->
+    <section id="hero" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold">Ciao, sono <span class="text-primary">Matteo</span></h1>
+                        <h2 class="mb-4">Studente di Informatica e Telecomunicazioni</h2>
+                        <p class="lead">Passione per la tecnologia, dedizione all'apprendimento e voglia di affrontare nuove sfide nel mondo digitale.</p>
+                        <div class="hero-buttons mt-5">
+                            <a href="#about" class="btn btn-primary me-3">Scopri di più</a>
+                            <a href="#contact" class="btn btn-outline-dark">Contattami</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="hero-image">
+                        <div class="code-animation">
+                            <pre><code>&lt;div class="future-developer"&gt;
+        const skills = ["HTML", "CSS", "JavaScript", "C#", "Python"];
+        const passion = true;
+        
+        function buildFuture() {
+            return skills.map(skill => learn(skill));
+        }
+        
+        if (passion) {
+            buildFuture();
+        }
+    &lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shape">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,149.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="./img/unnamed.jpg" alt="Studente di informatica" class="img-fluid rounded shadow">
+                            <div class="experience-badge">
+                                <span>4° anno</span>
+                                <span>Informatica</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2>Chi Sono</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    <div class="about-content">
+                        <p class="lead">Sono uno studente appassionato di tecnologia, attualmente al quarto anno di un percorso di studi in Informatica e Telecomunicazioni.</p>
+                        <p>La mia passione per l'informatica è nata fin da giovane, quando ho iniziato a esplorare il mondo della programmazione. Oggi, dopo anni di studio e pratica, ho sviluppato competenze solide in diverse tecnologie e linguaggi di programmazione.</p>
+                        <p>Mi piace affrontare problemi complessi e trovare soluzioni innovative. Il mio approccio allo sviluppo è basato sulla curiosità, la precisione e la costante voglia di migliorare le mie competenze.</p>
+                        <div class="key-points mt-4">
+                            <div class="point">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Sviluppo Web</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-database"></i>
+                                <span>Database</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Reti</span>
+                            </div>
+                            <div class="point">
+                                <i class="fas fa-code"></i>
+                                <span>Programmazione</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Le Mie Competenze</h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-description">Ecco le tecnologie e i linguaggi di programmazione che ho studiato e applicato nei miei progetti.</p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>HTML & CSS</h3>
+                        <p>Competenza intermedia nella creazione di strutture web semantiche e design responsive con CSS moderno.</p>
+                        <div class="skill-level">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                            </div>
+                            <span>Avanzato</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p>Conoscenza base/media di JavaScript per la creazione di interazioni dinamiche e manipolazione del DOM.</p>
+                        <div class="skill-level">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 65%"></div>
+                            </div>
+                            <span>Intermedio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-bootstrap"></i>
+                        </div>
+                        <h3>Bootstrap</h3>
+                        <p>Conoscenza base del framework Bootstrap per la creazione di layout responsivi e componenti UI.</p>
+                        <div class="skill-level">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 55%"></div>
+                            </div>
+                            <span>Base</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3>Python</h3>
+                        <p>Conoscenza base di Python per lo sviluppo di script e automazione di processi.</p>
+                        <div class="skill-level">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%"></div>
+                            </div>
+                            <span>Base</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>MySQL</h3>
+                        <p>Conoscenza base di MySQL per la gestione e interrogazione di database relazionali.</p>
+                        <div class="skill-level">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%"></div>
+                            </div>
+                            <span>Base</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-windows"></i>
+                        </div>
+                        <h3>C#</h3>
+                        <p>Competenza intermedia nel linguaggio C# per lo sviluppo di applicazioni desktop e backend.</p>
+                        <div class="skill-level">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 70%"></div>
+                            </div>
+                            <span>Medio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Certificazioni</h2>
+                <div class="title-underline mx-auto"></div>
+                <p class="section-description">Ho ottenuto diverse certificazioni che attestano le mie competenze tecniche.</p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Sicurezza sul Lavoro</h3>
+                        <p>Certificazione che attesta la conoscenza delle normative e procedure di sicurezza nell'ambiente lavorativo informatico.</p>
+                        <a href="./sicurezzaL.html" class="btn-link">Dettagli <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Cisco IT Essentials</h3>
+                        <p>Certificazione Cisco che attesta competenze nell'hardware dei PC, nei sistemi operativi, nelle reti e nella sicurezza.</p>
+                        <a href="./CiscoIT.html" class="btn-link">Dettagli <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>ECDL - Computer Essentials</h3>
+                        <p>Modulo della Patente Europea del Computer che certifica le competenze di base nell'uso del computer.</p>
+                        <a href="./moduloEcdl.html" class="btn-link">Dettagli <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section py-5" style="background: linear-gradient(to bottom, #f0f4f8, #e0e7ff);">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <h2 class="display-4 text-primary fw-bold">Esperienza Pratica</h2>
+                <div class="title-underline mx-auto mb-4" style="border-top: 3px solid #4361ee; width: 50px;"></div>
+                <p class="section-description">La mia esperienza formativa include attività pratiche e progetti reali.</p>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="experience-timeline">
+                        <div class="timeline-item wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="timeline-badge">
+                                <i class="fas fa-briefcase fa-3x text-primary"></i>
+                            </div>
+                            <div class="timeline-content shadow-lg rounded p-4" style="background-color: #fff; border-left: 5px solid #4361ee;">
+                                <h3>Percorso per le Competenze Trasversali e l'Orientamento (PCTO)</h3>
+                                <span class="timeline-date text-muted">174 ore</span>
+                                <p>Ho completato con successo 174 ore di PCTO, durante le quali ho potuto applicare in contesti reali le competenze acquisite a scuola. Questa esperienza mi ha permesso di sviluppare non solo abilità tecniche, ma anche competenze trasversali fondamentali per il mondo del lavoro.</p>
+                                <div class="timeline-skills">
+                                    <span class="badge bg-primary text-light">Teamwork</span>
+                                    <span class="badge bg-primary text-light">Problem Solving</span>
+                                    <span class="badge bg-primary text-light">Comunicazione</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="timeline-badge">
+                                <i class="fas fa-project-diagram fa-3x text-primary"></i>
+                            </div>
+                            <div class="timeline-content shadow-lg rounded p-4" style="background-color: #fff; border-left: 5px solid #4361ee;">
+                                <h3>Progetti Scolastici</h3>
+                                <span class="timeline-date text-muted">In corso</span>
+                                <p>Ho partecipato a diversi progetti scolastici che mi hanno permesso di mettere in pratica le mie conoscenze teoriche, quali: corso di educazione finanziaria, volontariato a Verona e laboratori didattici a scuola. Attraverso questi progetti ho sviluppato competenze pratiche in vari ambiti, come la gestione del tempo e la pianificazione, oltre a migliorare le mie capacità di lavoro di squadra. Ho imparato a lavorare in modo collaborativo, collaborando con altri studenti e imparando a gestire le diverse fasi di sviluppo.</p>
+                                <h5>Competenze:</h5>
+                                <div class="timeline-skills">
+                                    <ul class="list-unstyled">
+                                        <li><i class="fas fa-check-circle text-primary"></i> Web Development</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Gestione Progetti</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Problem Solving</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Teamwork</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Comunicazione</li>
+                                        <li><i class="fas fa-check-circle text-primary"></i> Creatività</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="section-title">
+                        <h2>Contattami</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    <div class="contact-content">
+                        <p class="lead">Sono sempre aperto a nuove opportunità di apprendimento e collaborazione. Non esitare a contattarmi per discutere di progetti, opportunità o semplicemente per scambiare idee.</p>
+                        <div class="contact-info mt-4">
+                            <div class="info-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>matteobonomo777@gmail.com</p>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-phone"></i>
+                                <p>+39 123 456 7890</p>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>TO, Italia</p>
+                            </div>
+                        </div>
+                        <div class="social-links mt-4">
+                            <a href="https://github.com/17mattee" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/matteo-bonomo-48464a359/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/17.matteee?igsh=MTNxMmFrcm9uY3RwMw==" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form-container">
+                        <!-- Esempio con Formspree (gratuito) -->
+                        <form id="contactForm" class="contact-form" onsubmit="return sendEmail(this, event);">                            <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Il tuo nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="La tua email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Oggetto</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Oggetto del messaggio" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Messaggio</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Il tuo messaggio" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Invia Messaggio</button>
+                    </form>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <div class="footer-links">
+                        <div class="link-group">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#hero">Home</a></li>
+                                <li><a href="#about">Chi Sono</a></li>
+                                <li><a href="#skills">Competenze</a></li>
+                                <li><a href="#certifications">Certificazioni</a></li>
+                                <li><a href="#experience">Esperienza</a></li>
+                                <li><a href="#contact">Contatti</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Il Mio Portfolio. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Carica jQuery prima di qualsiasi script che lo usa -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <!-- Carica gli altri script che dipendono da jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("🚀 Inizializzazione script...");
+            
+            // ========== NAVBAR DINAMICA ==========
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section[id]');
+            
+            console.log("📍 Sezioni trovate:", sections.length);
+            console.log("🔗 Link navbar trovati:", navLinks.length);
+            
+            // Funzione per rimuovere la classe active da tutti i link
+            function removeActiveClasses() {
+                navLinks.forEach(link => link.classList.remove('active'));
+            }
+            
+            // Funzione per aggiungere la classe active al link corretto
+            function addActiveClass(id) {
+                const targetLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                if (targetLink) {
+                    targetLink.classList.add('active');
+                    console.log(`✅ Attivato link per sezione: ${id}`);
+                }
+            }
+            
+            // Funzione per determinare quale sezione è attualmente visibile
+            function getCurrentSection() {
+                let currentSection = '';
+                const scrollPosition = window.scrollY + 150; // Offset per anticipare il cambio
+                
+                // Se siamo molto in alto, mostra sempre "hero"
+                if (window.scrollY < 100) {
+                    return 'hero';
+                }
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                return currentSection;
+            }
+            
+            // Event listener principale per lo scroll
+            let scrollTimeout;
+            window.addEventListener('scroll', function() {
+                // Debounce per migliorare le performance
+                clearTimeout(scrollTimeout);
+                scrollTimeout = setTimeout(() => {
+                    const currentSection = getCurrentSection();
+                    
+                    if (currentSection) {
+                        removeActiveClasses();
+                        addActiveClass(currentSection);
+                    }
+                }, 10);
+            });
+            
+            // Smooth scroll per i link della navbar
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        console.log(`🎯 Navigando verso: ${targetId}`);
+                        
+                        // Rimuovi active da tutti i link
+                        removeActiveClasses();
+                        // Aggiungi active al link cliccato
+                        this.classList.add('active');
+                        
+                        // Calcola la posizione con offset per la navbar fissa
+                        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+                        const targetPosition = targetSection.offsetTop - navbarHeight - 20;
+                        
+                        // Scroll smooth alla sezione
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Inizializza lo stato corretto al caricamento della pagina
+            setTimeout(() => {
+                const initialSection = getCurrentSection();
+                if (initialSection) {
+                    removeActiveClasses();
+                    addActiveClass(initialSection);
+                    console.log(`🎬 Sezione iniziale: ${initialSection}`);
+                }
+            }, 100);
+            
+            // ========== EMAILJS ==========
+            console.log("📩 Tentativo di caricamento EmailJS...");
+
+            setTimeout(() => {
+                if (typeof emailjs !== 'undefined') {
+                    console.log("✅ EmailJS caricato con successo!");
+                    emailjs.init("30L1N5LUInR8e34jn"); // Inizializza con il tuo User ID
+                } else {
+                    console.error("❌ Errore: EmailJS non è stato caricato!");
+                }
+            }, 2000); // Aspetta 2 secondi per assicurarti che lo script sia stato caricato
+        });
+
+        // Funzione per EmailJS (separata per essere chiamata dal form)
+        function sendEmail(form, event) {
+            event.preventDefault();
+
+            if (typeof emailjs === 'undefined') {
+                console.error("❌ EmailJS non è stato caricato correttamente.");
+                alert("Errore: il servizio EmailJS non è disponibile.");
+                return false;
+            }
+
+            var templateParams = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value
+            };
+
+            console.log("📨 Tentativo di invio email con dati:", templateParams);
+
+            emailjs.send('service_8ltuhoo', 'template_vlcxesf', templateParams)
+                .then(function(response) {
+                    console.log("✅ Email inviata con successo!", response);
+                    alert("Messaggio inviato con successo!");
+                    form.reset();
+                }, function(error) {
+                    console.error("❌ Errore nell'invio dell'email", error);
+                    alert("Errore nell'invio del messaggio. Riprova più tardi.");
+                });
+
+            return false;
+        }
+
+        // Debug helper - rimuovi in produzione
+        window.debugNavbar = function() {
+            console.log("=== DEBUG NAVBAR ===");
+            console.log("Scroll position:", window.scrollY);
+            console.log("Current section:", getCurrentSection());
+            document.querySelectorAll('section[id]').forEach(section => {
+                console.log(`${section.id}: top=${section.offsetTop}, height=${section.offsetHeight}`);
+            });
+        };
+    </script>
+    
+
+</body>
+</html>

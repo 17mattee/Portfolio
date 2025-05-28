@@ -1,0 +1,619 @@
+/* Variables */
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3a0ca3;
+    --accent-color: #4cc9f0;
+    --dark-color: #1d3557;
+    --light-color: #f8f9fa;
+    --gray-color: #6c757d;
+    --success-color: #2ecc71;
+    --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.text-accent {
+    color: var(--accent-color);
+}
+
+/* Button styles */
+.btn {
+    border-radius: 30px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline-dark {
+    color: var(--dark-color);
+    border-color: var(--dark-color);
+    background-color: transparent;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* For hero section specifically */
+#hero .btn-outline-dark {
+    color: var(--light-color);
+    border-color: var(--light-color);
+}
+
+#hero .btn-outline-dark:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Nuova Animazione */
+.btn:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: -100px; /* Aggiunge spazio per l'onda */
+}
+
+/* Aggiungiamo un padding-top negativo o margin-top per spostare verso l'alto */
+.row.h-100.align-items-center {
+    margin-top: -70px; /* Questo sposta il contenuto verso l'alto */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10; /* Assicura che il contenuto stia sopra l'onda */
+}
+.hero-image {
+    position: relative;
+    z-index: 10; /* Stesso z-index del contenuto */
+}
+
+.hero-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5; /* Valore inferiore per stare sotto al contenuto */
+    pointer-events: none; /* Importante! Permette di cliccare attraverso l'onda */
+}
+
+.hero-buttons {
+    position: relative;
+    z-index: 20; /* Valore più alto per assicurare che i pulsanti siano sempre sopra */
+}
+
+.section-title {
+    margin-bottom: 2.5rem;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.title-underline {
+    height: 4px;
+    width: 60px;
+    background-color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--gray-color);
+    font-size: 1.1rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--dark-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.8) !important;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+/* Migliora la transizione della sottolineatura */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: white !important;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    padding: 2rem 0;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.code-animation {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    overflow: hidden;
+}
+
+.code-animation pre {
+    margin: 0;
+    color: #f8f9fa;
+    font-family: 'Consolas', 'Monaco', monospace;
+    line-height: 1.6;
+}
+
+.hero-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+/* About Section */
+.about-section {
+    background-color: white;
+}
+
+.about-image {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    transition: var(--transition);
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.experience-badge {
+    position: absolute;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: -20px;
+    right: -20px;
+    font-weight: 700;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.about-content {
+    font-size: 1.1rem;
+}
+
+.about-content .lead {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.key-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.point {
+    flex: 1 0 45%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.point i {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(67, 97, 238, 0.1);
+    border-radius: 50%;
+}
+
+/* Skills Section */
+.skills-section {
+    background-color: #f8f9fa;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    height: 100%;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.skill-level {
+    margin-top: 1.5rem;
+}
+
+.skill-level .progress {
+    height: 8px;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    background-color: #e9ecef;
+}
+
+.skill-level .progress-bar {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.skill-level span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gray-color);
+}
+
+/* Certifications Section */
+.certifications-section {
+    background-color: white;
+}
+.certification-card {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.certification-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.certification-card p {
+    font-size: 1rem;
+    color: var(--gray-color);
+    margin-bottom: 1.5rem;
+}
+.certification-card .btn {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.certification-card .btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.certification-card .btn-outline-dark {
+    color: var(--dark-color);
+    border-color: var(--dark-color);
+}
+.certification-card .btn-outline-dark:hover {
+    background-color: var(--dark-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.experience-section {
+    background-color: #f8f9fa;
+}
+
+/* Timeline item */
+.timeline-item {
+    margin-bottom: 40px;
+}
+
+.timeline-badge {
+    width: 60px;
+    height: 60px;
+    background-color: #4361ee;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.timeline-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 5px solid #4361ee;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.timeline-skills span {
+    background-color: #4361ee;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+.timeline-skills ul li {
+    font-size: 1rem;
+    padding: 5px 0;
+}
+
+.wow {
+    visibility: hidden;
+}
+
+.wow.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effects */
+.timeline-item:hover .timeline-content {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.timeline-item:hover .timeline-badge {
+    background-color: #3a0ca3;
+}
+/* SicurezzaL Page Styles */
+.sicurezza-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+.sicurezza-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--dark-color);
+}
+
+.sicurezza-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.sicurezza-title h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 0.5rem auto 0;
+}
+
+.sicurezza-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.sicurezza-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: var(--transition);
+    max-width: 350px;
+    width: 100%;
+}
+
+.sicurezza-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sicurezza-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.sicurezza-card-body {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.sicurezza-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.sicurezza-card-text {
+    font-size: 1rem;
+    color: var(--gray-color);
+    margin-bottom: 1.5rem;
+}
+
+.sicurezza-card .btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    transition: var(--transition);
+}
+
+.sicurezza-card .btn:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.sicurezza-paragraph {
+    max-width: 800px;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+    color: var(--gray-color);
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.sicurezza-paragraph strong {
+    color: var(--dark-color);
+    font-weight: 700;
+}

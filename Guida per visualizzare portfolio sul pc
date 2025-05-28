@@ -1,0 +1,22 @@
+Guida su come visualizzare il curriculum in locale
+Cosa serve?
+
+- Un computer 
+- Una connessione internet
+- Un browser (come Chrome, Firefox, Edge…)
+
+1) Scaricare il curriculum da github 
+
+Cliccare sul bottone verde "Code".
+Selezionare "Download ZIP".
+Il file verrà scaricato sul tuo computer come archivio .zip.
+
+2) Estrarre il file .zip
+Cliccare con il tasto destro sul file .zip e scegliere "Estrai tutto" (o simile).
+Verrà creata una cartella con dentro tutti i file del tuo curriculum.
+
+3) Aprire il file html nel browser (chrome)
+Entrare nella cartella estratta.
+Cercare un file chiamato index.html (o qualcosa di simile).
+Fare doppio clic su quel file.
+Si aprirà automaticamente nel browser, e vedrai il tuo curriculum come se fosse un sito!
